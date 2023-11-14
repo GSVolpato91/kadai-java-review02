@@ -4,13 +4,13 @@ public class Review01 {
 
     public static void main(String[] args) {
         int price = 1800;
-        double tax = (price * 0.10);
-       int c = (int) tax;
-        System.out.println("The price including tax for a"+ price + "yen item is" + (price + c)+ "yen." + "Consumption tax is" + c + "yen.");
+        int result = add(price, 8);
+        System.out.println(price + "円の商品の税込価格は" + (price + result) + "円（消費税は" + result +"円）です。");
     }
     
-        public static double tax(double price, double tax) {
-            double result = price * tax;
+   
+        public static int add(int price, int tax) {
+            int result = (price * tax) / 100;
             return result;
 
     }
